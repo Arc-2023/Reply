@@ -29,7 +29,6 @@ class AccountsRepositoryImpl : AccountsRepository {
     override fun getAllUserAccounts(): Flow<List<Account>> = flow {
         emit(LocalAccountsDataProvider.allUserAccounts)
     }
-
     override fun getContactAccountByUid(uid: Long): Flow<Account> = flow {
         emit(LocalAccountsDataProvider.getContactAccountByUid(uid))
     }

@@ -25,21 +25,18 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import com.example.reply.R
-
 object ReplyRoute {
     const val INBOX = "Inbox"
     const val ARTICLES = "Articles"
     const val DM = "DirectMessages"
     const val GROUPS = "Groups"
 }
-
 data class ReplyTopLevelDestination(
     val route: String,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
     val iconTextId: Int
 )
-
 class ReplyNavigationActions(private val navController: NavHostController) {
 
     fun navigateTo(destination: ReplyTopLevelDestination) {
@@ -58,7 +55,6 @@ class ReplyNavigationActions(private val navController: NavHostController) {
         }
     }
 }
-
 val TOP_LEVEL_DESTINATIONS = listOf(
     ReplyTopLevelDestination(
         route = ReplyRoute.INBOX,
